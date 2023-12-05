@@ -13,16 +13,23 @@
     <main>
       <section class="settings">
         <div class="settings-container">
-          <label>perspective: {{ perspective }}px;</label>
+
+          <label>Width: {{ width }}px;</label>
+          <input type="range" min="10" max="200" v-model="width"/>
+
+          <label>Height: {{ height }}px;</label>
+          <input type="range" min="10" max="200" v-model="height"/>
+
+          <label>Perspective: {{ perspective }}px;</label>
           <input type="range" min="0" max="999" v-model="perspective"/>
 
-          <label>rotateX: {{ rotateX }}deg; </label>
+          <label> RotateX: {{ rotateX }}deg; </label>
           <input type="range" min="-180" max="180" v-model="rotateX" />
 
-          <label>rotatey: {{ rotateY }}deg; </label>
+          <label>RotateY: {{ rotateY }}deg; </label>
           <input type="range" min="-180" max="180" v-model="rotateY"/>
 
-          <label>rotateZ: {{ rotateZ }}deg; </label>
+          <label>RotateZ: {{ rotateZ }}deg; </label>
           <input
             type="range"
             min="-180"
@@ -35,7 +42,7 @@
       </section>
       <section class="output">
         <div class="box-container">
-          <div class="box"></div>
+          <div class="box" :style="box"></div>
         </div>
       </section>
     </main>
