@@ -14,11 +14,7 @@ const vm = Vue.createApp({
         return { 
           height : `${this.height}px`,
           width : `${this.width}px`,
-          transform : `
-          perspective(${this.perspective}px)
-          rotateX(${this.rotateX}deg)
-          rotateY(${this.rotateY}deg)
-          rotateZ(${this.rotateZ}deg)
+          transform : `perspective(${this.perspective}px) rotateX(${this.rotateX}deg) rotateY(${this.rotateY}deg) rotateZ(${this.rotateZ}deg)
           `
         }
       }
