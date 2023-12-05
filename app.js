@@ -32,7 +32,7 @@ const vm = Vue.createApp({
 
         },
         copy () {
-            let text = `${this.box.transform}`;
+            let text = `${this.box.transform}`
             navigator.clipboard.writeText(text);
             alert('text copied to clip board');
         }
